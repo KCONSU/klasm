@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> klasmaconsulting</title>
+    <link rel="stylesheet" href="styles/contact.css">
+    <meta name="viewport" content="width=device-width">
+    <style>
+      /* Contact form and company details (self-contained, does not change contact.css) */
+      @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600;700&family=Red+Hat+Text:wght@400;500;600&display=swap");
+      .cx { --cx-ink: #0b1a2e; --cx-muted: #4a5a6e; --cx-line: #dde4ec; --cx-soft: #f5f8fc; --cx-accent: #0055d4; --cx-band: #071a33; --cx-band-fg: #eef4fb; --cx-band-muted: #9fb3cb;
+        box-sizing: border-box; max-width: 1080px; margin: 36px auto 64px; padding: 0 16px;
+        display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 20px; align-items: start;
+        font-family: "Red Hat Text", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--cx-ink); text-align: left; line-height: 1.6; }
+      .cx *, .cx *::before, .cx *::after { box-sizing: border-box; }
+      .cx [hidden] { display: none; }
+      .cx h3 { font-family: "Red Hat Display", "Helvetica Neue", Arial, sans-serif; font-weight: 700; letter-spacing: -0.01em; margin: 0; }
+
+      .contact-form { min-width: 0; padding: 28px; background: #fff; border: 1px solid var(--cx-line); border-radius: 8px; box-shadow: 0 18px 40px -24px rgba(7, 26, 51, 0.35); }
+      .contact-form h3 { font-size: 1.4rem; }
+      .contact-form .cf-intro { margin: 6px 0 22px; color: var(--cx-muted); }
+      .contact-form .cf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      .contact-form .cf-field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+      .contact-form .cf-full { grid-column: 1 / -1; }
+      .contact-form label { font-size: 0.74rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--cx-muted); }
+      .contact-form label span { text-transform: none; letter-spacing: 0; font-weight: 400; }
+      .contact-form input, .contact-form select, .contact-form textarea { width: 100%; font: inherit; color: inherit; padding: 11px 12px; border: 1px solid var(--cx-line); border-radius: 4px; background: var(--cx-soft); transition: border-color .2s, background .2s; }
+      .contact-form textarea { min-height: 140px; resize: vertical; }
+      .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: none; border-color: var(--cx-accent); background: #fff; box-shadow: 0 0 0 3px rgba(0, 85, 212, 0.15); }
+      .contact-form button { margin-top: 20px; display: inline-flex; align-items: center; gap: 10px; font-family: "Red Hat Display", "Helvetica Neue", Arial, sans-serif; font-size: 1rem; font-weight: 600; padding: 13px 26px; border: 0; border-radius: 4px; background: var(--cx-accent); color: #fff; cursor: pointer; transition: background .2s; }
+      .contact-form button::after { content: "\2192"; transition: transform .25s; }
+      .contact-form button:hover { background: var(--cx-ink); }
+      .contact-form button:hover::after { transform: translateX(4px); }
+      .contact-form button:focus-visible { outline: 3px solid var(--cx-accent); outline-offset: 2px; }
+      .contact-form .cf-sent { margin: 0 0 18px; padding: 12px 14px; border-radius: 4px; background: #e8f4ec; color: #1e5b33; }
+
+      .cx-info { min-width: 0; padding: 32px 28px; border-radius: 8px; background: var(--cx-band); color: var(--cx-band-fg); display: grid; gap: 22px; }
+      .cx-info h3 { font-size: 1.35rem; color: var(--cx-band-fg); }
+      .cx-info dl { margin: 0; display: grid; gap: 18px; }
+      .cx-info dt { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--cx-band-muted); }
+      .cx-info dd { margin: 4px 0 0; font-size: 1.02rem; overflow-wrap: anywhere; }
+      .cx-info a { color: var(--cx-band-fg); text-decoration: none; border-bottom: 1px solid var(--cx-band-muted); }
+      .cx-info a:hover { border-bottom-color: var(--cx-band-fg); }
+
+      @media (max-width: 760px) {
+        .cx { grid-template-columns: minmax(0, 1fr); margin: 24px auto 40px; }
+        .contact-form { padding: 20px 16px; }
+        .contact-form .cf-grid { grid-template-columns: 1fr; }
+        .cx-info { padding: 24px 20px; }
+      }
+    </style>
+</head>
+
+<body>
+  <header>
+  <h2><a href="index.HTML"> klasma consulting</a></h2>
+  <a class="logo" href="index.html"><img src="images/k.png" alt="logo"></a>
+    <nav>
+         <input class="hamb-checkbox" type="checkbox" id="checkbox"/>
+        <label class="hamb-label" for="checkbox">
+          <span class="line1 hamb-line"></span>
+          <span class="line2 hamb-line"></span>
+          <span class="line3 hamb-line"></span>
+        </label>
+         <ul>
+     <li> <a id="ho" href="index.html">HOME</a></li>
+     <li><a id="ab" href="about.html">ABOUT</a></li>
+     <li><a id="se" href="servises.html">SERVICES</a></li>
+     <li ><a id="sol" href="solutions.html">SOLUTIONS</a></li>
+     <li><a  id="con" href="contact.html">CONTACT</a></li>
+          </ul>
+     </nav>
+  </header>
+   <main>
+    <div>
+        <h3>Contact us</h3>
+        <p>Please contact us for answers to your questions or to schedule an appointment.</p>
+    </div>
+
+    <div class="cx">
+      <section class="contact-form" id="contact-form">
+        <h3>Send us a message</h3>
+        <p class="cf-intro">Fill in the form and we will get back to you with an answer or a suggested appointment time.</p>
+        <p class="cf-sent" id="cf-sent" hidden>Thank you. Your message has been sent and we will reply as soon as possible.</p>
+        <form action="https://formsubmit.co/info@klasmaconsulting.com" method="POST">
+          <input type="hidden" name="_subject" value="New message from the Klasma Consulting website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://kconsu.github.io/klasm/contact.html?sent=1#contact-form">
+          <div class="cf-grid">
+            <div class="cf-field">
+              <label for="cf-name">Full name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="cf-field">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="cf-field">
+              <label for="cf-phone">Phone <span>(optional)</span></label>
+              <input id="cf-phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="cf-field">
+              <label for="cf-reason">Reason</label>
+              <select id="cf-reason" name="reason">
+                <option>A question</option>
+                <option>Schedule an appointment</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="cf-field cf-full">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" required></textarea>
+            </div>
+          </div>
+          <button type="submit">Send message</button>
+        </form>
+      </section>
+
+      <aside class="cx-info">
+        <h3>KLASMA CONSULTING PC</h3>
+        <dl>
+          <div><dt>Address</dt><dd>Kakia Thalassa<br>Keratea, TK 19001<br>Attiki, Greece</dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:info@klasmaconsulting.com">info@klasmaconsulting.com</a></dd></div>
+        </dl>
+      </aside>
+    </div>
+
+    <script>
+      if (new URLSearchParams(location.search).get('sent') === '1') {
+        document.getElementById('cf-sent').hidden = false;
+      }
+    </script>
+
+   </main>
+
+</body>
+</html>
