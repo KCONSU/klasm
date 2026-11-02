@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> klasmaconsulting</title>
+    <link rel="stylesheet" href="styles/contact.css">
+    <meta name="viewport" content="width=device-width">
+    <style>
+      /* Contact form (self-contained, does not depend on contact.css) */
+      .contact-form { box-sizing: border-box; max-width: 640px; margin: 40px auto 56px; padding: 28px 24px; border: 1px solid #d9dee5; border-radius: 6px; background: #fff; color: #1d2733; text-align: left; }
+      .contact-form *, .contact-form *::before, .contact-form *::after { box-sizing: border-box; }
+      .contact-form h3 { margin: 0 0 6px; }
+      .contact-form .cf-intro { margin: 0 0 20px; color: #55606d; }
+      .contact-form .cf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; }
+      .contact-form .cf-field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+      .contact-form .cf-full { grid-column: 1 / -1; }
+      .contact-form label { font-size: 0.9rem; font-weight: 600; }
+      .contact-form label span { font-weight: 400; color: #6b7682; }
+      .contact-form input, .contact-form select, .contact-form textarea { width: 100%; font: inherit; color: inherit; padding: 10px 12px; border: 1px solid #c9d1db; border-radius: 4px; background: #fff; }
+      .contact-form textarea { min-height: 140px; resize: vertical; }
+      .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: 2px solid #1f4f8f; outline-offset: 1px; border-color: #1f4f8f; }
+      .contact-form button { margin-top: 18px; font: inherit; font-weight: 600; padding: 12px 26px; border: 0; border-radius: 4px; background: #1d2733; color: #fff; cursor: pointer; }
+      .contact-form button:hover { background: #1f4f8f; }
+      .contact-form .cf-sent { margin: 0 0 18px; padding: 12px 14px; border-radius: 4px; background: #e8f4ec; color: #1e5b33; }
+      .contact-form [hidden] { display: none; }
+      .contact-form .cf-note { margin: 14px 0 0; font-size: 0.85rem; color: #6b7682; }
+      @media (max-width: 600px) { .contact-form { margin: 28px 16px 40px; padding: 20px 16px; } .contact-form .cf-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+
+<body> 
+  <header>  
+  <h2><a href="index.HTML"> klasma consulting</a></h2>
+  <a class="logo" href="index.html"><img src="images/k.png" alt="logo"></a>
+    <nav> 
+         <input class="hamb-checkbox" type="checkbox" id="checkbox"/>
+        <label class="hamb-label" for="checkbox">
+          <span class="line1 hamb-line"></span>
+          <span class="line2 hamb-line"></span>
+          <span class="line3 hamb-line"></span>
+        </label>
+         <ul>
+     <li> <a id="ho" href="index.html">HOME</a></li>
+     <li><a id="ab" href="about.html">ABOUT</a></li>
+     <li><a id="se" href="servises.html">SERVICES</a></li>
+     <li ><a id="sol" href="solutions.html">SOLUTIONS</a></li>
+     <li><a  id="con" href="contact.html">CONTACT</a></li>
+          </ul>
+     </nav>
+  </header>        
+   <main>
+    <div>
+        <h3>Contact us</h3>
+        <p>Please contact us for answers to your questions or to schedule an appointment.</p>
+    </div>
+    <div>
+        <h3>KLASMA CONSULTING PC</h3>
+        <p>Poseidonos Str. <br> Keratea, TK 19001 <br> Attiki, Greece</p>
+    </div> 
+    
+    
+  
+      <div class="container">
+        
+        <div class="phone">
+          
+           <img src="images/phone.jpg" alt="phone">
+            <p>+302299028309</p>
+             
+        </div>
+           <div class="gmail">
+            <img src="images/mail.jpg" alt="mail">
+            <p>klasmaconsulting.com</p>
+        </div>
+    </div>
+
+    <section class="contact-form" id="contact-form">
+      <h3>Send us a message</h3>
+      <p class="cf-intro">Fill in the form and we will get back to you with an answer or a suggested appointment time.</p>
+      <p class="cf-sent" id="cf-sent" hidden>Thank you. Your message has been sent and we will reply as soon as possible.</p>
+      <!-- Replace YOUR-EMAIL@example.com with the address that should receive the messages -->
+      <form action="https://formsubmit.co/YOUR-EMAIL@example.com" method="POST">
+        <input type="hidden" name="_subject" value="New message from the Klasma Consulting website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://kconsu.github.io/klasm/contact.html?sent=1#contact-form">
+        <div class="cf-grid">
+          <div class="cf-field">
+            <label for="cf-name">Full name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="cf-field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="cf-field">
+            <label for="cf-phone">Phone <span>(optional)</span></label>
+            <input id="cf-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="cf-field">
+            <label for="cf-reason">Reason</label>
+            <select id="cf-reason" name="reason">
+              <option>A question</option>
+              <option>Schedule an appointment</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="cf-field cf-full">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" required></textarea>
+          </div>
+        </div>
+        <button type="submit">Send message</button>
+        <p class="cf-note">You can also reach us by phone at +302299028309.</p>
+      </form>
+    </section>
+    <script>
+      if (new URLSearchParams(location.search).get('sent') === '1') {
+        document.getElementById('cf-sent').hidden = false;
+      }
+    </script>
+
+   </main>
+   
+</body>
+</html>
